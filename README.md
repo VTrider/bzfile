@@ -36,7 +36,7 @@ local bigString = file:Dump()
 Specification:
 
 ```lua
-bzfile.Open(filePath: string, openMode: string, writeParameter: string) -> handle
+bzfile.Open(filePath: string, openMode: string?, writeParameter: string?) -> handle
 ```
 Opens a handle to a file, creating a new one if write mode is specified and the file does not exist.
 
