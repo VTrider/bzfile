@@ -53,12 +53,12 @@ Default options if only path is specified is "r" (read). In "w" (write) mode the
 ### File Methods:
 
 ```lua
-file:Write(content: string) -> &handle (reference to the handle to allow method chaining)
+file:Write(content: string) -> self (reference to the handle to allow method chaining)
 ```
 Unformatted write with no newline.
 
 ```lua
-file:Writeln(content: string) -> &handle
+file:Writeln(content: string) -> self
 ```
 Write with newline.
 
@@ -78,7 +78,7 @@ file:Dump() -> content: string
 Dumps the entire contents of the file into one string
 
 ```lua
-file:Flush() -> &handle
+file:Flush() -> self
 ```
 Flushes the input/output buffer, makes text appear immediately in the file, may affect performance if called frequently.
 
@@ -95,7 +95,7 @@ bzfile.GetWorkingDirectory() -> path: string
 Gets the root directory of the game (..\common\Battlezone98Redux\).
 
 ```lua
-bzfile.GetWorkshopDirectory() -> path:string
+bzfile.GetWorkshopDirectory() -> path: string
 ```
 Gets the workshop directory (..\content\301650).
 
